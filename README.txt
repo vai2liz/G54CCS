@@ -2,8 +2,7 @@ This repository is used to store the G54CCN - Connected Computing at Scale cours
 
 The software must be created using Python and GoogleApp Engine.
 
-The aim of this coursework is to implement a cloud based song rating web site. While the functionality requirements must 
-be satisfied, extra marks are not given for visual appeal.
+The aim of this coursework is to implement a cloud based song rating web site. While the functionality requirements must be satisfied, extra marks are not given for visual appeal.
 
 Can be run from command line by typing:
 
