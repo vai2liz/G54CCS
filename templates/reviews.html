@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+    {% autoescape true %}
+    <html>
+        <body>
+            <font size="14"><b>{{reviews[0].artist}} - {{reviews[0].title}}</b></font></br>
+            <b>Average Song Rating: {{average}}</b></br>
+            Sort by rating: <a href=/Review/{{ reviews[0].key().id() }}/r0/>Descending</a> , <a href=/Review/{{ reviews[0].key().id() }}/r1/>Ascending</a> | Sort by time written: <a href=/Review/{{ reviews[0].key().id() }}/t0/>Descending</a> , <a href=/Review/{{ reviews[0].key().id() }}/t1/>Ascending</a> </br></br>
+            {% for review in reviews %}
+                Rating: <b> {{review.rating}}</b></br>
+                Time Entered: <b> {{review.date.strftime("%Y-%m-%d %H:%M" )}} </b> </br>
+                Review:</br>
+                {{review.content}}
+                </br>
+                <a href=/Delete/{{review.key().id()}}> Delete </a>
+                </br></br>
+                
+            {% endfor %}
+            
+            </br>
+            <a href=/addNew/{{ reviews[0].key().id() }}/>Write a New Review</a></br>
+            <a href="/home">Home</a> | <a href="/allReviews">Song Review List</a>
+        </body>
+    </html>
+    {% endautoescape %}

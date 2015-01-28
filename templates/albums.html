@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+    {% autoescape true %}
+    <html>
+        <body>
+            <b>All Albums</b></br></br>
+            {% for album in albums %}
+                <b> <a href=/Album/{{ album.key().id() }}/> </b> {{album.artist}} - {{album.title}} </a> </br>
+            {% endfor %}
+            
+            </br>
+            <a href=/addNewAlbum>Write a New Review</a></br>
+            <a href="/home">Home</a>
+        </body>
+    </html>
+    {% endautoescape %}

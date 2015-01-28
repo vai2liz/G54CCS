@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+    {% autoescape true %}
+    <html>
+        <body>
+            <b>All Songs</b></br></br>
+            {% for review in reviews %}
+                <b> <a href=/Review/{{ review.key().id() }}/> </b> {{review.artist}} - {{review.title}} </a> </br>
+            {% endfor %}
+            
+            </br>
+            <a href=/addNew>Write a New Review</a></br>
+            <a href="/home">Home</a>
+        </body>
+    </html>
+    {% endautoescape %}

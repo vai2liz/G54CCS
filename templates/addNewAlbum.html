@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+  {% autoescape true %}
+  <html>
+    <body>
+      <form action="/postAlbum" method="post">
+        <div>
+          Artist <input maxlength="32" type="text" name ="artist" value="{{albumArtist}}" required>
+          Title <input maxlength="32" type="text" name ="title" value="{{albumTitle}}" required>
+          </br>
+          Rating: 1 
+          <input type="radio" name="rating" value="1" required>
+          <input type="radio" name="rating" value="2">
+          <input type="radio" name="rating" value="3">
+          <input type="radio" name="rating" value="4">
+          <input type="radio" name="rating" value="5">
+          5
+          </br>
+          Review:</br> 
+          <textarea maxlength="500" name ="content" rows="3" cols="60" required></textarea>
+        </div>
+          <input type="submit" value="Add Review">
+        </div>
+        <a href="/home">Home</a> | <a href="/allAlbums">Album Review List</a>
+      </form>
+    </body>
+  </html>
+  {% endautoescape %}
