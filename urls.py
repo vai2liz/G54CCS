@@ -1,4 +1,8 @@
-## this includes the Google App Engine framework in our app
+##urls.py
+##
+##The file includes the URL mapping
+
+# this includes the Google App Engine
 
 import webapp2
 import views

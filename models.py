@@ -1,3 +1,7 @@
+##models.py
+##
+## This file describes the data model of the reviewing system.
+
 from google.appengine.ext import db
     
 class Album(db.Model):

@@ -1,11 +1,15 @@
-## this includes the Google App Engine framework in our app
+##views.py
+##
+##This file contains the server side processing of the requests
+
+## this includes the Google App Engine 
 from google.appengine.ext import db
 import webapp2
 import models
 import os
 import jinja2
  
- #including jinja2 templating service
+#including jinja2 templating service
 JE = jinja2.Environment(
     loader=jinja2.FileSystemLoader(os.path.dirname(__file__)),
     extensions=['jinja2.ext.autoescape'],
